@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  /* Theme One */
+
+  /* Backgrounds */
+
+  /* blue (main background)*/
+  --very-dark-desaturated: hsl(222, 26%, 31%);
+  /* blue (toggle background, keypad background) */
+  --very-dark-desaturated-toggle: hsl(223, 31%, 20%);
+  /* blue (screen background */
+  --very-dark-desaturated-blue: hsl(224, 36%, 15%);
+
+  /* Keys */
+
+  --Desaturated-dark-blue/*(key background)*/: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-shadow/*(key shadow)*/: hsl(224, 28%, 35%);
+  --Red/*(key background, toggle)*/: hsl(6, 63%, 50%);
+  --Dark-red/*(key shadow)*/: hsl(6, 70%, 34%);
+  --Light-grayish-orange/*(key background)*/: hsl(30, 25%, 89%);
+  --Grayish-orange/*(key shadow)*/: hsl(28, 16%, 65%);
+
+  /* Text */
+
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Theme Two */
+
+  /* Backgrounds;*/
+
+  --Light-gray/*(main background)*/: hsl(0, 0%, 90%);
+  --Grayish-red/*(toggle background, keypad background)*/: hsl(0, 5%, 81%);
+  --Very-light-gray/*(screen background)*/: hsl(0, 0%, 93%);
+
+  /* Keys */
+
+  --Dark-moderate-cyan/*(key background)*/: hsl(185, 42%, 37%);
+  --Very-dark-cyan/*(key shadow)*/: hsl(185, 58%, 25%);
+
+  --Orange/* (key background, toggle)*/: hsl(25, 98%, 40%);
+  --Dark-orange/*(key shadow)*/: hsl(25, 99%, 27%);
+  --Light-grayish-yellow/*(key background)*/: hsl(45, 7%, 89%);
+  --Dark-grayish-orange/* (key shadow) */: hsl(35, 11%, 61%);
+
+  /* Text */
+
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --White/*(text)*/: hsl(0, 0%, 100%);
+
+  /* Theme 3 */
+
+  /* Backgrounds */
+
+  --Very-dark-violet/*(main background)*/: hsl(268, 75%, 9%);
+  --Very-dark-violet-screen/*(toggle background, keypad background, screen
+background)*/: hsl(
+    268,
+    71%,
+    12%
+  );
+
+  /* Keys */
+
+  --Dark-violet/* (key background) */: hsl(281, 89%, 26%);
+  --Vivid-magenta/*(key shadow)*/: hsl(285, 91%, 52%);
+
+  --Pure-cyan/*(key background, toggle)*/: hsl(176, 100%, 44%);
+  --Soft-cyan/*(key shadow)*/: hsl(177, 92%, 70%);
+
+  --Very-dark-violet/*(key background)*/: hsl(268, 47%, 21%);
+  --Dark-magenta/*(key shadow)*/: hsl(290, 70%, 36%);
+
+  /* Text */
+
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+}
+
+body {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.theme-one {
+  background: var(--very-dark-desaturated);
+}
+
+.theme-two {
+  background: var(--Very-light-gray);
+}
+
+.theme-three {
+  background: var(--Very-dark-violet);
+}
+
+section {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--White);
+  margin-block: 16px;
+  padding-inline: 5px;
+}
+
+.theme-two header {
+  color: #000;
+}
+
+.theme-three header {
+  color: var(--Light-yellow);
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+header > div p {
+  text-transform: uppercase;
+}
+
+.theme-box {
+  background: var(--very-dark-desaturated-blue);
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.theme-two .theme-box {
+  background: var(--Grayish-red);
+}
+
+.theme-three .theme-box {
+  background: var(--Very-dark-violet-screen);
+}
+
+.theme-box p {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.theme-box p.toggle {
+  background: var(--Red);
+}
+
+.theme-two .theme-box p.toggle {
+  background: var(--Orange);
+}
+
+.theme-three .theme-box p.toggle {
+  background: var(--Pure-cyan);
+}
+
+.result {
+  width: 100%;
+  font-size: 32px;
+  padding: 32px;
+  font-weight: 700;
+  background: var(--very-dark-desaturated-blue);
+  color: #fff;
+  text-align: right;
+  border-radius: 5px;
+}
+
+.theme-two .result {
+  background: #fff;
+  color: #000;
+}
+
+.theme-three .result {
+  background: var(--Very-dark-violet-screen);
+  color: var(--Light-yellow);
+}
+
+.button-group {
+  background: var(--very-dark-desaturated-blue);
+  padding: 15px 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.theme-two .button-group {
+  background: var(--Grayish-red);
+}
+
+.theme-three .button-group {
+  background: var(--Very-dark-violet-screen);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buttons input {
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 32px;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--Light-grayish-orange);
+  color: var(--Very-dark-grayish-blue);
+  font-weight: 700;
+  box-shadow: 0px 3px 0px var(--Grayish-orange);
+  transition: all ease 0.5s;
+}
+
+.buttons input:hover {
+  background: var(--White);
+}
+
+.theme-two .buttons input {
+  background: var(--Light-grayish-yellow);
+  box-shadow: 0px 3px 0px var(--Very-dark-grayish-yellow);
+}
+
+.theme-two .buttons input:hover {
+  background: var(--White);
+}
+
+.theme-three .buttons input {
+  background: var(--Dark-violet);
+  box-shadow: 0px 3px 0px var(--Vivid-magenta);
+  color: var(--Light-yellow);
+}
+
+.theme-three .buttons input:hover {
+  background: hsl(281, 89%, 45%);
+}
+
+.buttons input.del,
+.buttons input.reset {
+  background: var(--Desaturated-dark-blue);
+  color: #fff;
+  box-shadow: 0px 3px 0px var(--Desaturated-dark-blue-shadow);
+}
+
+.buttons input.del:hover,
+.buttons input.reset:hover {
+  background: hsl(225, 21%, 55%, 1);
+}
+
+.theme-two .buttons input.del,
+.theme-two .buttons input.reset {
+  background: var(--Dark-moderate-cyan);
+  box-shadow: 0px 3px 0px var(--Very-dark-cyan);
+  color: var(--White);
+}
+
+.theme-two .buttons input.del:hover,
+.theme-two .buttons input.reset:hover {
+  background: hsl(185, 42%, 50%, 1);
+}
+
+.theme-three .buttons input.del,
+.theme-three .buttons input.reset {
+  background: var(--Very-dark-violet);
+  box-shadow: 0px 3px 0px var(--Dark-magenta);
+}
+
+.theme-three .buttons input.del:hover,
+.theme-three .buttons input.reset:hover {
+  background: hsl(268, 47%, 42%);
+}
+
+.buttons input.equal {
+  background: var(--Red);
+  color: #fff;
+  box-shadow: 0px 3px 0px var(--Dark-red);
+}
+
+.buttons input.equal:hover {
+  background: hsl(6, 63%, 60%);
+}
+
+.theme-two .buttons input.equal {
+  background: var(--Orange);
+  box-shadow: 0px 3px 0px var(--Dark-orange);
+}
+
+.theme-two .buttons input.equal:hover {
+  background: hsl(25, 98%, 50%, 1);
+}
+
+.theme-three .buttons input.equal {
+  background: var(--Pure-cyan);
+  box-shadow: 0px 3px 0px var(--Soft-cyan);
+  color: var(--White);
+}
+
+.theme-three .buttons input.equal:hover {
+  background: hsl(176, 100%, 60%, 1);
+}
